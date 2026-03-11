@@ -1,9 +1,6 @@
 package com.franco.ForoHUB.domain.topico;
 
-import com.franco.ForoHUB.domain.usuario.DatosLoginUsuario;
 import com.franco.ForoHUB.domain.usuario.DatosUsuario;
-import com.franco.ForoHUB.domain.usuario.Usuario;
-
 import java.time.LocalDateTime;
 
 public record DatosListaTopicos(

@@ -58,7 +58,7 @@ public class TopicoController {
     @PutMapping("/{id}")
     public ResponseEntity actualizar(@PathVariable Long id,@RequestBody @Valid ActualizarTopico datos) {
         var topico = topicoRepository.findById(id);
-        if (!topico.isPresent()) {
+        if (topico.isEmpty()) {
             throw new ValidacionExcepcion("No se encuentra este id en nuestro foro");
         }
         topico.get().actualizarInformacion(datos);
@@ -70,7 +70,7 @@ public class TopicoController {
     @DeleteMapping("/{id}")
     public ResponseEntity eliminar(@PathVariable Long id){
         var topico = topicoRepository.findById(id);
-        if (!topico.isPresent()) {
+        if (topico.isEmpty()) {
             throw new ValidacionExcepcion("No se encuentra este id en nuestro foro");
         }
         topicoRepository.deleteById(id);

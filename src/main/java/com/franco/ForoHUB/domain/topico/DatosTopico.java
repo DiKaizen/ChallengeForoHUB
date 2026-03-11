@@ -11,12 +11,4 @@ public record DatosTopico(
         @Valid DatosLoginUsuario usuario,
         @NotBlank String curso
 ) {
-    public DatosTopico(Topico topico) {
-        this(
-                topico.getTitulo(),
-                topico.getMensaje(),
-                new DatosLoginUsuario(topico.getUsuario()),
-                topico.getCurso()
-        );
-    }
 }

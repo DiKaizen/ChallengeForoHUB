@@ -3,14 +3,10 @@ package com.franco.ForoHUB.domain.topico;
 import com.franco.ForoHUB.domain.usuario.Usuario;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.userdetails.UserDetails;
-
 import java.time.LocalDateTime;
 
 @Getter
