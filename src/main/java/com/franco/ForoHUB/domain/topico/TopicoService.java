@@ -21,10 +21,10 @@ public class TopicoService {
             throw  new ValidacionExcepcion("Ya existe este titulo en el foro");
         }
         var usuario = usuarioRepository.findByLogin(datos.usuario().login());
-        if (usuario.getId().equals(null)){
+        if (usuario.isEmpty()){
             throw new ValidacionExcepcion("No existe este usuario");
         }
-        return new Topico(null,datos.titulo(), datos.mensaje(), LocalDateTime.now(),true,usuario,datos.curso());
+        return new Topico(null,datos.titulo(), datos.mensaje(), LocalDateTime.now(),true,usuario.get(),datos.curso());
     }
 
 
